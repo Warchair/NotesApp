@@ -90,7 +90,7 @@ const Form = () => {
 
 	return (
 		<div className='w-full flex justify-center items-center py-10 z-10'>
-			<div className=' flex flex-col gap-4 p-4 rounded-lg drop-shadow-md border lg:w-[800px] w-full h-auto bg-white'>
+			<div className='flex flex-col gap-4 p-4 rounded-lg drop-shadow-md border lg:w-[800px] w-full h-auto bg-white'>
 				{isNotice.field && (
 					<div
 						className={`px-4 py-2 rounded-md text-center text-white ${
@@ -123,7 +123,7 @@ const Form = () => {
 					</div>
 					<label
 						htmlFor='image'
-						className='w-full aspect-square rounded-md bg-gray-50 flex flex-col justify-center items-center gap-2 cursor-pointer relative text-gray-500z-10'>
+						className='aspect-square w-full h-full rounded-md bg-gray-50 flex flex-col justify-center items-center gap-2 cursor-pointer relative text-gray-500z-10'>
 						<>
 							{!imagePreview ? (
 								<div className='flex flex-col justify-center items-center'>
@@ -151,10 +151,10 @@ const Form = () => {
 									<p className='text-gray-600 font-medium'>Upload Image</p>
 								</div>
 							) : (
-								<div>
+								<div className='w-full h-full '>
 									<img
 										src={imagePreview}
-										className='object-cover rounded-md'
+										className='object-cover w-full h-full rounded-md'
 										alt=''
 									/>
 									<div

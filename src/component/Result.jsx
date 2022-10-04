@@ -111,15 +111,15 @@ const Result = () => {
 	}
 
 	return (
-		<div className='py-10'>
+		<div className='py-10 xl:container mx-auto'>
 			{/* edit data */}
 			<div className={isHidden ? "block" : "hidden"}>
 				<div
-					className={`fixed flex justify-center md:items-center w-full h-screen px-4 py-4 bg-black/30 top-0 left-0  transition-all duration-200 ease-out transform z-20 overflow-y-auto  ${
+					className={`fixed flex justify-center items-center w-full h-screen px-4 py-4 bg-black/30 top-0 left-0  transition-all duration-200 ease-out transform z-20 ${
 						openEdit ? "opacity-1 " : "opacity-0"
 					} `}>
 					<div
-						className={`fixed px-4 py-4 mb-4 bg-white flex flex-col gap-3 rounded-lg lg:w-[800px] transition-all duration-300 ease-out transform z-30  ${
+						className={`px-4 py-4 mb-4 bg-white flex flex-col gap-3 rounded-lg lg:w-[800px] w-full transition-all duration-300 ease-out transform z-30  ${
 							openEdit ? "scale-100 opacity-1" : "scale-75 opacity-0"
 						}`}>
 						<div className='flex justify-between items-center'>
@@ -141,7 +141,7 @@ const Result = () => {
 							</div>
 						</div>
 						<div className='w-full flex justify-center items-center'>
-							<div className=' flex flex-col gap-4 w-full h-auto bg-white'>
+							<div className='flex flex-col gap-4 w-full h-auto bg-white'>
 								<div className='flex md:flex-row flex-col md:gap-4 gap-2'>
 									<div className='flex flex-col gap-4 grow'>
 										<div>
@@ -178,10 +178,10 @@ const Result = () => {
 											{!imagePreview ? (
 												<JellyTriangle size={25} speed={1.75} color='gray' />
 											) : (
-												<div>
+												<div className='w-full h-full'>
 													<img
 														src={imagePreview}
-														className='bg-cover h-full w-full rounded-md'
+														className='object-cover h-full w-full rounded-md'
 														alt=''
 													/>
 													<label
